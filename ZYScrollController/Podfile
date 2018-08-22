@@ -1,0 +1,28 @@
+platform :ios, '9.0'
+
+#公共库
+def config_pod
+    pod 'SnapKit'
+    pod 'Masonry'
+    pod 'JLRoutes'
+    pod 'YYModel'
+    pod 'MJRefresh'
+    pod 'HMSegmentedControl'
+    pod 'AFNetworking'
+end
+
+target 'ZYScrollController' do
+    #swift 把三方库打包成静态库
+  use_frameworks!
+
+  config_pod
+
+  target 'ZYScrollControllerTests' do
+    inherit! :search_paths
+  end
+
+  target 'ZYScrollControllerUITests' do
+    inherit! :search_paths
+  end
+
+end

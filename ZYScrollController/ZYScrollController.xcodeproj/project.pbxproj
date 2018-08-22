@@ -1,0 +1,870 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1035962F7F6CFBA18408F8EB /* Pods_ZYScrollControllerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9184AF2A176542C4464647B7 /* Pods_ZYScrollControllerUITests.framework */; };
+		57441D97B74DA98591117D3B /* Pods_ZYScrollControllerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371FBED8093EFE825028ED5C /* Pods_ZYScrollControllerTests.framework */; };
+		62BE411B212C60DD006E4931 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BE411A212C60DD006E4931 /* AppDelegate.swift */; };
+		62BE4122212C60DE006E4931 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62BE4121212C60DE006E4931 /* Assets.xcassets */; };
+		62BE4130212C60DE006E4931 /* ZYScrollControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BE412F212C60DE006E4931 /* ZYScrollControllerTests.swift */; };
+		62BE413B212C60DF006E4931 /* ZYScrollControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BE413A212C60DF006E4931 /* ZYScrollControllerUITests.swift */; };
+		62BE414D212C6552006E4931 /* ZYBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BE414C212C6552006E4931 /* ZYBaseViewController.swift */; };
+		62BE414F212C6577006E4931 /* ZYTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BE414E212C6577006E4931 /* ZYTabBarController.swift */; };
+		62BE4151212C658F006E4931 /* ZYNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BE4150212C658F006E4931 /* ZYNavigationController.swift */; };
+		62BE4158212C6645006E4931 /* ZYWealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BE4157212C6645006E4931 /* ZYWealthViewController.swift */; };
+		62BE415A212C6654006E4931 /* ZYFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BE4159212C6654006E4931 /* ZYFriendViewController.swift */; };
+		62BE415C212C6664006E4931 /* ZYMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BE415B212C6664006E4931 /* ZYMineViewController.swift */; };
+		62BE415E212C666D006E4931 /* ZYHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BE415D212C666D006E4931 /* ZYHomeViewController.swift */; };
+		62BE4164212C6932006E4931 /* TabBarChildrenControllers.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62BE4163212C6932006E4931 /* TabBarChildrenControllers.plist */; };
+		62BE4167212C6A25006E4931 /* ZYTakeOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BE4166212C6A25006E4931 /* ZYTakeOutViewController.swift */; };
+		62BE4169212C7390006E4931 /* ZYConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BE4168212C7390006E4931 /* ZYConfig.swift */; };
+		62BE416C212C76E9006E4931 /* ZYDynamicItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BE416B212C76E9006E4931 /* ZYDynamicItem.swift */; };
+		62BE416E212C78CF006E4931 /* ZYScrollPanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BE416D212C78CF006E4931 /* ZYScrollPanGestureRecognizer.swift */; };
+		62BE4170212C8586006E4931 /* UIScrollView+ZYScrollOffset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BE416F212C8586006E4931 /* UIScrollView+ZYScrollOffset.swift */; };
+		62F206C1212D079E00186E35 /* ZYScrollController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F206C0212D079D00186E35 /* ZYScrollController.swift */; };
+		E6E22A78E9BC059078CE5F00 /* Pods_ZYScrollController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD0350E941FC9FDD2264FFD7 /* Pods_ZYScrollController.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		62BE412C212C60DE006E4931 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 62BE410F212C60DD006E4931 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 62BE4116212C60DD006E4931;
+			remoteInfo = ZYScrollController;
+		};
+		62BE4137212C60DF006E4931 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 62BE410F212C60DD006E4931 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 62BE4116212C60DD006E4931;
+			remoteInfo = ZYScrollController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0269A9605744EF7A6A1749FF /* Pods-ZYScrollControllerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYScrollControllerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZYScrollControllerTests/Pods-ZYScrollControllerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		340F692B4BAD88B73BE73494 /* Pods-ZYScrollControllerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYScrollControllerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZYScrollControllerUITests/Pods-ZYScrollControllerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		371FBED8093EFE825028ED5C /* Pods_ZYScrollControllerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZYScrollControllerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52EBD491DDFF7E3DE186671C /* Pods-ZYScrollControllerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYScrollControllerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZYScrollControllerUITests/Pods-ZYScrollControllerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		62BE4117212C60DD006E4931 /* ZYScrollController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYScrollController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		62BE411A212C60DD006E4931 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		62BE4121212C60DE006E4931 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		62BE4126212C60DE006E4931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62BE412B212C60DE006E4931 /* ZYScrollControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZYScrollControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		62BE412F212C60DE006E4931 /* ZYScrollControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYScrollControllerTests.swift; sourceTree = "<group>"; };
+		62BE4131212C60DE006E4931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62BE4136212C60DF006E4931 /* ZYScrollControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZYScrollControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		62BE413A212C60DF006E4931 /* ZYScrollControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYScrollControllerUITests.swift; sourceTree = "<group>"; };
+		62BE413C212C60DF006E4931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62BE4148212C6412006E4931 /* ZYScrollController-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZYScrollController-Bridging-Header.h"; sourceTree = "<group>"; };
+		62BE414C212C6552006E4931 /* ZYBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYBaseViewController.swift; sourceTree = "<group>"; };
+		62BE414E212C6577006E4931 /* ZYTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYTabBarController.swift; sourceTree = "<group>"; };
+		62BE4150212C658F006E4931 /* ZYNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYNavigationController.swift; sourceTree = "<group>"; };
+		62BE4157212C6645006E4931 /* ZYWealthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYWealthViewController.swift; sourceTree = "<group>"; };
+		62BE4159212C6654006E4931 /* ZYFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYFriendViewController.swift; sourceTree = "<group>"; };
+		62BE415B212C6664006E4931 /* ZYMineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYMineViewController.swift; sourceTree = "<group>"; };
+		62BE415D212C666D006E4931 /* ZYHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYHomeViewController.swift; sourceTree = "<group>"; };
+		62BE4163212C6932006E4931 /* TabBarChildrenControllers.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TabBarChildrenControllers.plist; sourceTree = "<group>"; };
+		62BE4166212C6A25006E4931 /* ZYTakeOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYTakeOutViewController.swift; sourceTree = "<group>"; };
+		62BE4168212C7390006E4931 /* ZYConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYConfig.swift; sourceTree = "<group>"; };
+		62BE416B212C76E9006E4931 /* ZYDynamicItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYDynamicItem.swift; sourceTree = "<group>"; };
+		62BE416D212C78CF006E4931 /* ZYScrollPanGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYScrollPanGestureRecognizer.swift; sourceTree = "<group>"; };
+		62BE416F212C8586006E4931 /* UIScrollView+ZYScrollOffset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ZYScrollOffset.swift"; sourceTree = "<group>"; };
+		62F206C0212D079D00186E35 /* ZYScrollController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYScrollController.swift; sourceTree = "<group>"; };
+		9184AF2A176542C4464647B7 /* Pods_ZYScrollControllerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZYScrollControllerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94BAE8C79426106EAB5E429A /* Pods-ZYScrollController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYScrollController.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZYScrollController/Pods-ZYScrollController.release.xcconfig"; sourceTree = "<group>"; };
+		B82312F62B2E5B35E7DCD167 /* Pods-ZYScrollControllerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYScrollControllerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZYScrollControllerTests/Pods-ZYScrollControllerTests.release.xcconfig"; sourceTree = "<group>"; };
+		DD0350E941FC9FDD2264FFD7 /* Pods_ZYScrollController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZYScrollController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD5B05B6E5E241BA0D44778C /* Pods-ZYScrollController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYScrollController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZYScrollController/Pods-ZYScrollController.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		62BE4114212C60DD006E4931 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6E22A78E9BC059078CE5F00 /* Pods_ZYScrollController.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62BE4128212C60DE006E4931 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57441D97B74DA98591117D3B /* Pods_ZYScrollControllerTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62BE4133212C60DF006E4931 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1035962F7F6CFBA18408F8EB /* Pods_ZYScrollControllerUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5889BC3B8B7749D2517C0796 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD0350E941FC9FDD2264FFD7 /* Pods_ZYScrollController.framework */,
+				371FBED8093EFE825028ED5C /* Pods_ZYScrollControllerTests.framework */,
+				9184AF2A176542C4464647B7 /* Pods_ZYScrollControllerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		62BE410E212C60DD006E4931 = {
+			isa = PBXGroup;
+			children = (
+				62BE4119212C60DD006E4931 /* ZYScrollController */,
+				62BE412E212C60DE006E4931 /* ZYScrollControllerTests */,
+				62BE4139212C60DF006E4931 /* ZYScrollControllerUITests */,
+				62BE4118212C60DD006E4931 /* Products */,
+				7C8B27885908CEC3E2B2FA54 /* Pods */,
+				5889BC3B8B7749D2517C0796 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		62BE4118212C60DD006E4931 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				62BE4117212C60DD006E4931 /* ZYScrollController.app */,
+				62BE412B212C60DE006E4931 /* ZYScrollControllerTests.xctest */,
+				62BE4136212C60DF006E4931 /* ZYScrollControllerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		62BE4119212C60DD006E4931 /* ZYScrollController */ = {
+			isa = PBXGroup;
+			children = (
+				62BE415F212C66AA006E4931 /* Modules */,
+				62BE4152212C65AF006E4931 /* Business */,
+				62BE414B212C64D5006E4931 /* Resources */,
+				62BE414A212C64C4006E4931 /* Main */,
+			);
+			path = ZYScrollController;
+			sourceTree = "<group>";
+		};
+		62BE412E212C60DE006E4931 /* ZYScrollControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				62BE412F212C60DE006E4931 /* ZYScrollControllerTests.swift */,
+				62BE4131212C60DE006E4931 /* Info.plist */,
+			);
+			path = ZYScrollControllerTests;
+			sourceTree = "<group>";
+		};
+		62BE4139212C60DF006E4931 /* ZYScrollControllerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				62BE413A212C60DF006E4931 /* ZYScrollControllerUITests.swift */,
+				62BE413C212C60DF006E4931 /* Info.plist */,
+			);
+			path = ZYScrollControllerUITests;
+			sourceTree = "<group>";
+		};
+		62BE4149212C64BC006E4931 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				62BE4168212C7390006E4931 /* ZYConfig.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		62BE414A212C64C4006E4931 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				62BE411A212C60DD006E4931 /* AppDelegate.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		62BE414B212C64D5006E4931 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				62BE4121212C60DE006E4931 /* Assets.xcassets */,
+				62BE4148212C6412006E4931 /* ZYScrollController-Bridging-Header.h */,
+				62BE4126212C60DE006E4931 /* Info.plist */,
+				62BE4163212C6932006E4931 /* TabBarChildrenControllers.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		62BE4152212C65AF006E4931 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				62BE4165212C69E9006E4931 /* TakeOut */,
+				62BE4156212C6608006E4931 /* wealth */,
+				62BE4155212C65EA006E4931 /* Friend */,
+				62BE4154212C65E3006E4931 /* Mine */,
+				62BE4153212C65D9006E4931 /* Home */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		62BE4153212C65D9006E4931 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				62BE415D212C666D006E4931 /* ZYHomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		62BE4154212C65E3006E4931 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				62BE415B212C6664006E4931 /* ZYMineViewController.swift */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		62BE4155212C65EA006E4931 /* Friend */ = {
+			isa = PBXGroup;
+			children = (
+				62BE4159212C6654006E4931 /* ZYFriendViewController.swift */,
+			);
+			path = Friend;
+			sourceTree = "<group>";
+		};
+		62BE4156212C6608006E4931 /* wealth */ = {
+			isa = PBXGroup;
+			children = (
+				62BE4157212C6645006E4931 /* ZYWealthViewController.swift */,
+			);
+			path = wealth;
+			sourceTree = "<group>";
+		};
+		62BE415F212C66AA006E4931 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				62BE416A212C7679006E4931 /* ScrollController */,
+				62BE4149212C64BC006E4931 /* Config */,
+				62BE4162212C66F0006E4931 /* BaseViewController */,
+				62BE4161212C66D3006E4931 /* TabBarController */,
+				62BE4160212C66BF006E4931 /* NavigationController */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		62BE4160212C66BF006E4931 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				62BE4150212C658F006E4931 /* ZYNavigationController.swift */,
+			);
+			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		62BE4161212C66D3006E4931 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				62BE414E212C6577006E4931 /* ZYTabBarController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		62BE4162212C66F0006E4931 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				62BE414C212C6552006E4931 /* ZYBaseViewController.swift */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		62BE4165212C69E9006E4931 /* TakeOut */ = {
+			isa = PBXGroup;
+			children = (
+				62BE4166212C6A25006E4931 /* ZYTakeOutViewController.swift */,
+			);
+			path = TakeOut;
+			sourceTree = "<group>";
+		};
+		62BE416A212C7679006E4931 /* ScrollController */ = {
+			isa = PBXGroup;
+			children = (
+				62BE416B212C76E9006E4931 /* ZYDynamicItem.swift */,
+				62BE416D212C78CF006E4931 /* ZYScrollPanGestureRecognizer.swift */,
+				62BE416F212C8586006E4931 /* UIScrollView+ZYScrollOffset.swift */,
+				62F206C0212D079D00186E35 /* ZYScrollController.swift */,
+			);
+			path = ScrollController;
+			sourceTree = "<group>";
+		};
+		7C8B27885908CEC3E2B2FA54 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DD5B05B6E5E241BA0D44778C /* Pods-ZYScrollController.debug.xcconfig */,
+				94BAE8C79426106EAB5E429A /* Pods-ZYScrollController.release.xcconfig */,
+				0269A9605744EF7A6A1749FF /* Pods-ZYScrollControllerTests.debug.xcconfig */,
+				B82312F62B2E5B35E7DCD167 /* Pods-ZYScrollControllerTests.release.xcconfig */,
+				52EBD491DDFF7E3DE186671C /* Pods-ZYScrollControllerUITests.debug.xcconfig */,
+				340F692B4BAD88B73BE73494 /* Pods-ZYScrollControllerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		62BE4116212C60DD006E4931 /* ZYScrollController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62BE413F212C60DF006E4931 /* Build configuration list for PBXNativeTarget "ZYScrollController" */;
+			buildPhases = (
+				5999FD828D72ECF879B6E259 /* [CP] Check Pods Manifest.lock */,
+				62BE4113212C60DD006E4931 /* Sources */,
+				62BE4114212C60DD006E4931 /* Frameworks */,
+				62BE4115212C60DD006E4931 /* Resources */,
+				F8EC8487E793A9D3952C77EF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZYScrollController;
+			productName = ZYScrollController;
+			productReference = 62BE4117212C60DD006E4931 /* ZYScrollController.app */;
+			productType = "com.apple.product-type.application";
+		};
+		62BE412A212C60DE006E4931 /* ZYScrollControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62BE4142212C60DF006E4931 /* Build configuration list for PBXNativeTarget "ZYScrollControllerTests" */;
+			buildPhases = (
+				3D114435533F918A90018FFE /* [CP] Check Pods Manifest.lock */,
+				62BE4127212C60DE006E4931 /* Sources */,
+				62BE4128212C60DE006E4931 /* Frameworks */,
+				62BE4129212C60DE006E4931 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				62BE412D212C60DE006E4931 /* PBXTargetDependency */,
+			);
+			name = ZYScrollControllerTests;
+			productName = ZYScrollControllerTests;
+			productReference = 62BE412B212C60DE006E4931 /* ZYScrollControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		62BE4135212C60DF006E4931 /* ZYScrollControllerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62BE4145212C60DF006E4931 /* Build configuration list for PBXNativeTarget "ZYScrollControllerUITests" */;
+			buildPhases = (
+				017E2D3F05AF425CB3F107E7 /* [CP] Check Pods Manifest.lock */,
+				62BE4132212C60DF006E4931 /* Sources */,
+				62BE4133212C60DF006E4931 /* Frameworks */,
+				62BE4134212C60DF006E4931 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				62BE4138212C60DF006E4931 /* PBXTargetDependency */,
+			);
+			name = ZYScrollControllerUITests;
+			productName = ZYScrollControllerUITests;
+			productReference = 62BE4136212C60DF006E4931 /* ZYScrollControllerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		62BE410F212C60DD006E4931 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ZY;
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = zhouyu;
+				TargetAttributes = {
+					62BE4116212C60DD006E4931 = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					62BE412A212C60DE006E4931 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 62BE4116212C60DD006E4931;
+					};
+					62BE4135212C60DF006E4931 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 62BE4116212C60DD006E4931;
+					};
+				};
+			};
+			buildConfigurationList = 62BE4112212C60DD006E4931 /* Build configuration list for PBXProject "ZYScrollController" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 62BE410E212C60DD006E4931;
+			productRefGroup = 62BE4118212C60DD006E4931 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				62BE4116212C60DD006E4931 /* ZYScrollController */,
+				62BE412A212C60DE006E4931 /* ZYScrollControllerTests */,
+				62BE4135212C60DF006E4931 /* ZYScrollControllerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		62BE4115212C60DD006E4931 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62BE4122212C60DE006E4931 /* Assets.xcassets in Resources */,
+				62BE4164212C6932006E4931 /* TabBarChildrenControllers.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62BE4129212C60DE006E4931 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62BE4134212C60DF006E4931 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		017E2D3F05AF425CB3F107E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZYScrollControllerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3D114435533F918A90018FFE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZYScrollControllerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5999FD828D72ECF879B6E259 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZYScrollController-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8EC8487E793A9D3952C77EF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ZYScrollController/Pods-ZYScrollController-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/HMSegmentedControl/HMSegmentedControl.framework",
+				"${BUILT_PRODUCTS_DIR}/JLRoutes/JLRoutes.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HMSegmentedControl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JLRoutes.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZYScrollController/Pods-ZYScrollController-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		62BE4113212C60DD006E4931 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62BE415E212C666D006E4931 /* ZYHomeViewController.swift in Sources */,
+				62F206C1212D079E00186E35 /* ZYScrollController.swift in Sources */,
+				62BE415C212C6664006E4931 /* ZYMineViewController.swift in Sources */,
+				62BE4170212C8586006E4931 /* UIScrollView+ZYScrollOffset.swift in Sources */,
+				62BE414D212C6552006E4931 /* ZYBaseViewController.swift in Sources */,
+				62BE415A212C6654006E4931 /* ZYFriendViewController.swift in Sources */,
+				62BE416C212C76E9006E4931 /* ZYDynamicItem.swift in Sources */,
+				62BE4158212C6645006E4931 /* ZYWealthViewController.swift in Sources */,
+				62BE414F212C6577006E4931 /* ZYTabBarController.swift in Sources */,
+				62BE4167212C6A25006E4931 /* ZYTakeOutViewController.swift in Sources */,
+				62BE411B212C60DD006E4931 /* AppDelegate.swift in Sources */,
+				62BE416E212C78CF006E4931 /* ZYScrollPanGestureRecognizer.swift in Sources */,
+				62BE4169212C7390006E4931 /* ZYConfig.swift in Sources */,
+				62BE4151212C658F006E4931 /* ZYNavigationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62BE4127212C60DE006E4931 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62BE4130212C60DE006E4931 /* ZYScrollControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62BE4132212C60DF006E4931 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62BE413B212C60DF006E4931 /* ZYScrollControllerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		62BE412D212C60DE006E4931 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 62BE4116212C60DD006E4931 /* ZYScrollController */;
+			targetProxy = 62BE412C212C60DE006E4931 /* PBXContainerItemProxy */;
+		};
+		62BE4138212C60DF006E4931 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 62BE4116212C60DD006E4931 /* ZYScrollController */;
+			targetProxy = 62BE4137212C60DF006E4931 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		62BE413D212C60DF006E4931 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		62BE413E212C60DF006E4931 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		62BE4140212C60DF006E4931 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD5B05B6E5E241BA0D44778C /* Pods-ZYScrollController.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WRNUC3KJ6A;
+				INFOPLIST_FILE = "$(SRCROOT)/ZYScrollController/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = www.vocoor.com.ZYScrollController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		62BE4141212C60DF006E4931 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94BAE8C79426106EAB5E429A /* Pods-ZYScrollController.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WRNUC3KJ6A;
+				INFOPLIST_FILE = "$(SRCROOT)/ZYScrollController/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = www.vocoor.com.ZYScrollController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		62BE4143212C60DF006E4931 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0269A9605744EF7A6A1749FF /* Pods-ZYScrollControllerTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WRNUC3KJ6A;
+				INFOPLIST_FILE = ZYScrollControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = www.vocoor.com.ZYScrollControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZYScrollController.app/ZYScrollController";
+			};
+			name = Debug;
+		};
+		62BE4144212C60DF006E4931 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B82312F62B2E5B35E7DCD167 /* Pods-ZYScrollControllerTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WRNUC3KJ6A;
+				INFOPLIST_FILE = ZYScrollControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = www.vocoor.com.ZYScrollControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZYScrollController.app/ZYScrollController";
+			};
+			name = Release;
+		};
+		62BE4146212C60DF006E4931 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52EBD491DDFF7E3DE186671C /* Pods-ZYScrollControllerUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WRNUC3KJ6A;
+				INFOPLIST_FILE = ZYScrollControllerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = www.vocoor.com.ZYScrollControllerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZYScrollController;
+			};
+			name = Debug;
+		};
+		62BE4147212C60DF006E4931 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 340F692B4BAD88B73BE73494 /* Pods-ZYScrollControllerUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WRNUC3KJ6A;
+				INFOPLIST_FILE = ZYScrollControllerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = www.vocoor.com.ZYScrollControllerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZYScrollController;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		62BE4112212C60DD006E4931 /* Build configuration list for PBXProject "ZYScrollController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62BE413D212C60DF006E4931 /* Debug */,
+				62BE413E212C60DF006E4931 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62BE413F212C60DF006E4931 /* Build configuration list for PBXNativeTarget "ZYScrollController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62BE4140212C60DF006E4931 /* Debug */,
+				62BE4141212C60DF006E4931 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62BE4142212C60DF006E4931 /* Build configuration list for PBXNativeTarget "ZYScrollControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62BE4143212C60DF006E4931 /* Debug */,
+				62BE4144212C60DF006E4931 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62BE4145212C60DF006E4931 /* Build configuration list for PBXNativeTarget "ZYScrollControllerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62BE4146212C60DF006E4931 /* Debug */,
+				62BE4147212C60DF006E4931 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 62BE410F212C60DD006E4931 /* Project object */;
+}

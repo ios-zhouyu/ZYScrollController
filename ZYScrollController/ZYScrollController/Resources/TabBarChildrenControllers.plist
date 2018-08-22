@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>TabbarTitle</key>
+		<string>首页</string>
+		<key>NorIconName</key>
+		<string>tabbar_home_normal</string>
+		<key>SelIconName</key>
+		<string>tabbar_home_select</string>
+		<key>RootVcName</key>
+		<string>ZYHomeViewController</string>
+	</dict>
+	<dict>
+		<key>TabbarTitle</key>
+		<string>财富</string>
+		<key>NorIconName</key>
+		<string>tabbar_shopCart_normal</string>
+		<key>SelIconName</key>
+		<string>tabbar_shopCart_select</string>
+		<key>RootVcName</key>
+		<string>ZYWealthViewController</string>
+	</dict>
+	<dict>
+		<key>TabbarTitle</key>
+		<string>口碑</string>
+		<key>NorIconName</key>
+		<string>tabbar_scan_normal</string>
+		<key>SelIconName</key>
+		<string>tabbar_scan_select</string>
+		<key>RootVcName</key>
+		<string>ZYTakeOutViewController</string>
+	</dict>
+	<dict>
+		<key>TabbarTitle</key>
+		<string>朋友</string>
+		<key>NorIconName</key>
+		<string>tabbar_myCenter_normal</string>
+		<key>SelIconName</key>
+		<string>tabbar_myCenter_select</string>
+		<key>RootVcName</key>
+		<string>ZYFriendViewController</string>
+	</dict>
+	<dict>
+		<key>TabbarTitle</key>
+		<string>我的</string>
+		<key>NorIconName</key>
+		<string>tabbar_myCenter_normal</string>
+		<key>SelIconName</key>
+		<string>tabbar_myCenter_select</string>
+		<key>RootVcName</key>
+		<string>ZYMineViewController</string>
+	</dict>
+</array>
+</plist>
