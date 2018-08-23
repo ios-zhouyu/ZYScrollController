@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1035962F7F6CFBA18408F8EB /* Pods_ZYScrollControllerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9184AF2A176542C4464647B7 /* Pods_ZYScrollControllerUITests.framework */; };
 		57441D97B74DA98591117D3B /* Pods_ZYScrollControllerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371FBED8093EFE825028ED5C /* Pods_ZYScrollControllerTests.framework */; };
+		6268A538212ED8CE00C791B2 /* ZYHomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6268A537212ED8CE00C791B2 /* ZYHomeHeaderView.swift */; };
+		6268A53B212ED94000C791B2 /* UIColor+ZYAddition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6268A53A212ED94000C791B2 /* UIColor+ZYAddition.swift */; };
+		6268A541212EDB7700C791B2 /* ZYActivityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6268A540212EDB7700C791B2 /* ZYActivityListViewController.swift */; };
 		62BE411B212C60DD006E4931 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BE411A212C60DD006E4931 /* AppDelegate.swift */; };
 		62BE4122212C60DE006E4931 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62BE4121212C60DE006E4931 /* Assets.xcassets */; };
 		62BE4130212C60DE006E4931 /* ZYScrollControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BE412F212C60DE006E4931 /* ZYScrollControllerTests.swift */; };
@@ -52,6 +55,9 @@
 		340F692B4BAD88B73BE73494 /* Pods-ZYScrollControllerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYScrollControllerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZYScrollControllerUITests/Pods-ZYScrollControllerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		371FBED8093EFE825028ED5C /* Pods_ZYScrollControllerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZYScrollControllerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52EBD491DDFF7E3DE186671C /* Pods-ZYScrollControllerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYScrollControllerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZYScrollControllerUITests/Pods-ZYScrollControllerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6268A537212ED8CE00C791B2 /* ZYHomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYHomeHeaderView.swift; sourceTree = "<group>"; };
+		6268A53A212ED94000C791B2 /* UIColor+ZYAddition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ZYAddition.swift"; sourceTree = "<group>"; };
+		6268A540212EDB7700C791B2 /* ZYActivityListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYActivityListViewController.swift; sourceTree = "<group>"; };
 		62BE4117212C60DD006E4931 /* ZYScrollController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYScrollController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62BE411A212C60DD006E4931 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62BE4121212C60DE006E4931 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -120,6 +126,44 @@
 				9184AF2A176542C4464647B7 /* Pods_ZYScrollControllerUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6268A539212ED91B00C791B2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				6268A53A212ED94000C791B2 /* UIColor+ZYAddition.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		6268A53C212EDB1600C791B2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6268A540212EDB7700C791B2 /* ZYActivityListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6268A53D212EDB1E00C791B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6268A537212ED8CE00C791B2 /* ZYHomeHeaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6268A53E212EDB2500C791B2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6268A53F212EDB2B00C791B2 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		62BE410E212C60DD006E4931 = {
@@ -216,6 +260,10 @@
 			isa = PBXGroup;
 			children = (
 				62BE415D212C666D006E4931 /* ZYHomeViewController.swift */,
+				6268A53F212EDB2B00C791B2 /* Tool */,
+				6268A53E212EDB2500C791B2 /* Model */,
+				6268A53D212EDB1E00C791B2 /* View */,
+				6268A53C212EDB1600C791B2 /* Controller */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -247,6 +295,7 @@
 		62BE415F212C66AA006E4931 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				6268A539212ED91B00C791B2 /* Utilities */,
 				62BE416A212C7679006E4931 /* ScrollController */,
 				62BE4149212C64BC006E4931 /* Config */,
 				62BE4162212C66F0006E4931 /* BaseViewController */,
@@ -535,14 +584,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				62BE415E212C666D006E4931 /* ZYHomeViewController.swift in Sources */,
+				6268A538212ED8CE00C791B2 /* ZYHomeHeaderView.swift in Sources */,
 				62F206C1212D079E00186E35 /* ZYScrollController.swift in Sources */,
 				62BE415C212C6664006E4931 /* ZYMineViewController.swift in Sources */,
 				62BE4170212C8586006E4931 /* UIScrollView+ZYScrollOffset.swift in Sources */,
 				62BE414D212C6552006E4931 /* ZYBaseViewController.swift in Sources */,
 				62BE415A212C6654006E4931 /* ZYFriendViewController.swift in Sources */,
 				62BE416C212C76E9006E4931 /* ZYDynamicItem.swift in Sources */,
+				6268A541212EDB7700C791B2 /* ZYActivityListViewController.swift in Sources */,
 				62BE4158212C6645006E4931 /* ZYWealthViewController.swift in Sources */,
 				62BE414F212C6577006E4931 /* ZYTabBarController.swift in Sources */,
+				6268A53B212ED94000C791B2 /* UIColor+ZYAddition.swift in Sources */,
 				62BE4167212C6A25006E4931 /* ZYTakeOutViewController.swift in Sources */,
 				62BE411B212C60DD006E4931 /* AppDelegate.swift in Sources */,
 				62BE416E212C78CF006E4931 /* ZYScrollPanGestureRecognizer.swift in Sources */,

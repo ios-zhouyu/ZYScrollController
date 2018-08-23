@@ -33,7 +33,7 @@ class ZYScrollPanGestureRecognizer: UIPanGestureRecognizer {
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent) {
         if prohibited {
-            if canTouchesBeRecognized(touches: touches) {
+            if canTouchesBeRecognized(touches: touches) == false {
                 blocking = true
                 state = .recognized
                 return
@@ -44,7 +44,7 @@ class ZYScrollPanGestureRecognizer: UIPanGestureRecognizer {
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent) {
         if prohibited {
-            if canTouchesBeRecognized(touches: touches) {
+            if canTouchesBeRecognized(touches: touches) == false {
                 blocking = true
                 state = .recognized
                 return

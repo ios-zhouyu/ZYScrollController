@@ -17,10 +17,7 @@ class ZYScrollController: NSObject, UIGestureRecognizerDelegate, ZYScrollPanGest
     //父滑动视图
     private var _superScrollView: UIScrollView?
     var superScrollView: UIScrollView? {
-        get {
-            return _superScrollView
-        }
-        set {
+        didSet {
             if _superScrollView != subScrollView {
                 disableGesture()
                 _superScrollView = subScrollView
@@ -31,10 +28,7 @@ class ZYScrollController: NSObject, UIGestureRecognizerDelegate, ZYScrollPanGest
     //子滑动视图
     private var _subScrollView: UIScrollView?
     var subScrollView: UIScrollView? {
-        get {
-            return _subScrollView
-        }
-        set {
+        didSet {
             if _subScrollView != subScrollView {
                 disableGesture()
                 _subScrollView = subScrollView
@@ -44,7 +38,11 @@ class ZYScrollController: NSObject, UIGestureRecognizerDelegate, ZYScrollPanGest
     }
 
     fileprivate var panView: UIView?
-    fileprivate var panGesture: ZYScrollPanGestureRecognizer?
+    fileprivate var panGesture: ZYScrollPanGestureRecognizer? {
+        didSet {
+            panGesture?.delaysTouchesBegan = true
+        }
+    }
     fileprivate var isVertical: Bool = true
     
     //弹性和惯性动画
@@ -55,7 +53,7 @@ class ZYScrollController: NSObject, UIGestureRecognizerDelegate, ZYScrollPanGest
 
     
     // MARK: public
-    func setupTouch(view: UIView?) -> () {
+    func setupTouch(_ view: UIView?) -> () {
         if let view = view {
             panView = view
             panGesture = ZYScrollPanGestureRecognizer(target: self, action: #selector(panGestureRecognizerAction(_ :)))
@@ -93,9 +91,12 @@ class ZYScrollController: NSObject, UIGestureRecognizerDelegate, ZYScrollPanGest
             }
             animator?.removeAllBehaviors()
         case .changed:
+            //locationInView:获取到的是手指点击屏幕实时的坐标点；
+            //translationInView：获取到的是手指移动后，在相对坐标中的偏移量
             if isVertical {
+                //往上滑为负数，往下滑为正数
                 let currentY = panGesture.translation(in: panView).y
-                if superPullDisable {
+                if superPullDisable == true {
                     self.controlScrollVerticalWithoutSuperPull(detal: currentY)
                 } else {
                     self.controlScrollForVerticalWithSuperPull(detal: currentY)
@@ -135,25 +136,26 @@ class ZYScrollController: NSObject, UIGestureRecognizerDelegate, ZYScrollPanGest
         panGesture.setTranslation(CGPoint(x: 0, y: 0), in: panView)
     }
     
+    // MARK: super支持下拉
     fileprivate func controlScrollForVerticalWithSuperPull(detal: CGFloat) {
         let height = UIScreen.main.bounds.height
         let subMaxOffset = max(self.subScrollView!.zy_maxOffsetY(), 0)
         var aimOffsetY: CGFloat = 0.0
         if detal > 0 {//下滑
-            if self.subScrollView!.contentOffset.y > self.subScrollView!.zy_minOffsetY() {
+            if self.subScrollView!.contentOffset.y > 0 {
                 if aimOffsetY < 0 {
                     aimOffsetY = 0
                 }
-                self.subScrollView?.zy_setOffsetY(y: aimOffsetY)
+                self.subScrollView?.contentOffset = CGPoint(x: 0, y: aimOffsetY)
             } else {
-                if self.superScrollView!.contentOffset.y > self.superScrollView!.zy_minOffsetY() {
+                if self.superScrollView!.contentOffset.y > 0 {
                     if aimOffsetY < 0 {
                         aimOffsetY = 0
                     }
-                    self.superScrollView?.zy_setOffsetY(y: aimOffsetY)
+                    self.superScrollView?.contentOffset = CGPoint(x: 0, y: aimOffsetY)
                 } else {
-                    aimOffsetY = self.subScrollView!.contentOffset.y - rubberBandDistance(offset: detal, dimension: height)
-                    self.subScrollView?.zy_setOffsetY(y: aimOffsetY)
+                    aimOffsetY = self.superScrollView!.contentOffset.y - rubberBandDistance(offset: detal, dimension: height)
+                    self.superScrollView?.contentOffset = CGPoint(x: 0, y: aimOffsetY)
                 }
             }
         } else {//上滑
@@ -176,18 +178,21 @@ class ZYScrollController: NSObject, UIGestureRecognizerDelegate, ZYScrollPanGest
         }
     }
     
+    // MARK: supe不支持下拉
     fileprivate func controlScrollVerticalWithoutSuperPull(detal: CGFloat) {
         let height = UIScreen.main.bounds.height
         let subMaxOffset = max(self.subScrollView!.zy_maxOffsetY(), 0)
         var aimOffsetY: CGFloat = 0.0
         if detal > 0 {//下滑
             if self.subScrollView!.contentOffset.y > self.subScrollView!.zy_minOffsetY() {
+                aimOffsetY = self.subScrollView!.contentOffset.y - detal
                 if aimOffsetY < 0 {
                     aimOffsetY = 0
                 }
                 self.subScrollView?.zy_setOffsetY(y: aimOffsetY)
             } else {
                 if self.superScrollView!.contentOffset.y > self.superScrollView!.zy_minOffsetY() {
+                    aimOffsetY = self.superScrollView!.contentOffset.y - detal
                     if aimOffsetY < 0 {
                         aimOffsetY = 0
                     }
@@ -244,13 +249,13 @@ class ZYScrollController: NSObject, UIGestureRecognizerDelegate, ZYScrollPanGest
                     self?.springBehavior = nil
                 }
             }
-        } else if (self.superScrollView!.contentOffset.y > self.superScrollView!.zy_maxOffsetY()) {
+        } else if (self.subScrollView!.contentOffset.y > self.subScrollView!.zy_maxOffsetY()) {
             // sub超出的边界
             self.dynamicItem?.center = (self.subScrollView?.contentOffset)!
-            target = CGPoint(x: (self.superScrollView?.contentOffset.x)!, y: (self.superScrollView?.zy_maxOffsetY())!)
+            target = CGPoint(x: (self.subScrollView?.contentOffset.x)!, y: (self.subScrollView?.zy_maxOffsetY())!)
             action = { [weak self] in
-                if ((self?.superScrollView!.contentOffset.y)! < (self?.superScrollView!.zy_maxOffsetY())!) {
-                    self?.superScrollView?.contentOffset = (self?.dynamicItem?.center)!
+                if ((self?.subScrollView!.contentOffset.y)! < (self?.subScrollView!.zy_maxOffsetY())!) {
+                    self?.subScrollView?.contentOffset = (self?.dynamicItem?.center)!
                 } else {
                     self?.animator?.removeBehavior((self?.springBehavior)!)
                     self?.springBehavior = nil
