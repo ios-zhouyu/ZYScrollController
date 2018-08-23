@@ -136,11 +136,91 @@ class ZYScrollController: NSObject, UIGestureRecognizerDelegate, ZYScrollPanGest
     }
     
     fileprivate func controlScrollForVerticalWithSuperPull(detal: CGFloat) {
-        
+        let height = UIScreen.main.bounds.height
+        let subMaxOffset = max(self.subScrollView!.zy_maxOffsetY(), 0)
+        var aimOffsetY: CGFloat = 0.0
+        if detal > 0 {//下滑
+            if self.subScrollView!.contentOffset.y > self.subScrollView!.zy_minOffsetY() {
+                if aimOffsetY < 0 {
+                    aimOffsetY = 0
+                }
+                self.subScrollView?.zy_setOffsetY(y: aimOffsetY)
+            } else {
+                if self.superScrollView!.contentOffset.y > self.superScrollView!.zy_minOffsetY() {
+                    if aimOffsetY < 0 {
+                        aimOffsetY = 0
+                    }
+                    self.superScrollView?.zy_setOffsetY(y: aimOffsetY)
+                } else {
+                    aimOffsetY = self.subScrollView!.contentOffset.y - rubberBandDistance(offset: detal, dimension: height)
+                    self.subScrollView?.zy_setOffsetY(y: aimOffsetY)
+                }
+            }
+        } else {//上滑
+            if (NSInteger(self.superScrollView!.contentOffset.y)  <  NSInteger(self.superMaxScrollY)) {
+                aimOffsetY = self.superScrollView!.contentOffset.y - detal;
+                if aimOffsetY > self.superMaxScrollY {
+                    aimOffsetY = self.superMaxScrollY
+                }
+                self.superScrollView?.contentOffset = CGPoint(x: 0.0, y: aimOffsetY)
+            } else {
+                aimOffsetY = self.subScrollView!.contentOffset.y - detal
+                if aimOffsetY < 0 {
+                    aimOffsetY = 0;
+                } else if aimOffsetY > subMaxOffset {
+                    //当子ScrollView的contentOffset大于contentSize.height时
+                    aimOffsetY = self.subScrollView!.contentOffset.y - rubberBandDistance(offset: detal, dimension: height);
+                }
+                self.subScrollView?.contentOffset = CGPoint(x: 0.0, y: aimOffsetY)
+            }
+        }
     }
     
     fileprivate func controlScrollVerticalWithoutSuperPull(detal: CGFloat) {
-        
+        let height = UIScreen.main.bounds.height
+        let subMaxOffset = max(self.subScrollView!.zy_maxOffsetY(), 0)
+        var aimOffsetY: CGFloat = 0.0
+        if detal > 0 {//下滑
+            if self.subScrollView!.contentOffset.y > self.subScrollView!.zy_minOffsetY() {
+                if aimOffsetY < 0 {
+                    aimOffsetY = 0
+                }
+                self.subScrollView?.zy_setOffsetY(y: aimOffsetY)
+            } else {
+                if self.superScrollView!.contentOffset.y > self.superScrollView!.zy_minOffsetY() {
+                    if aimOffsetY < 0 {
+                        aimOffsetY = 0
+                    }
+                    self.superScrollView?.zy_setOffsetY(y: aimOffsetY)
+                } else {
+                    aimOffsetY = self.subScrollView!.contentOffset.y - rubberBandDistance(offset: detal, dimension: height)
+                    self.subScrollView?.zy_setOffsetY(y: aimOffsetY)
+                }
+            }
+        } else {//上滑
+            if (NSInteger(self.superScrollView!.contentOffset.y)  <  NSInteger(self.superMaxScrollY)) {
+                aimOffsetY = self.superScrollView!.contentOffset.y - detal;
+                if aimOffsetY > self.superMaxScrollY {
+                    aimOffsetY = self.superMaxScrollY
+                }
+                self.superScrollView?.zy_setOffsetY(y: aimOffsetY)
+            } else {
+                aimOffsetY = self.subScrollView!.contentOffset.y - detal
+                if aimOffsetY < 0 {
+                    aimOffsetY = 0;
+                } else if aimOffsetY > subMaxOffset {
+                    //当子ScrollView的contentOffset大于contentSize.height时
+                    aimOffsetY = self.subScrollView!.contentOffset.y - rubberBandDistance(offset: detal, dimension: height);
+                }
+                self.subScrollView?.zy_setOffsetY(y: aimOffsetY)
+            }
+        }
+    }
+    
+    fileprivate func rubberBandDistance(offset: CGFloat, dimension: CGFloat) -> CGFloat {
+        let constant: CGFloat = 0.55
+        let result: CGFloat = (constant * fabs(offset) * dimension) / (dimension + constant * fabs(offset))
+        return offset < 0.0 ? -result : result
     }
     
     fileprivate func normalizeOffsetWithSuperPull() {
