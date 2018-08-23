@@ -17,18 +17,19 @@ class ZYScrollController: NSObject, UIGestureRecognizerDelegate, ZYScrollPanGest
     //父滑动视图
     private var _superScrollView: UIScrollView?
     var superScrollView: UIScrollView? {
-        didSet {
-            if _superScrollView != subScrollView {
+        willSet {
+            if _superScrollView != superScrollView {
                 disableGesture()
-                _superScrollView = subScrollView
+                _superScrollView = superScrollView
                 enableGesture()
+                
             }
         }
     }
     //子滑动视图
     private var _subScrollView: UIScrollView?
     var subScrollView: UIScrollView? {
-        didSet {
+        willSet {
             if _subScrollView != subScrollView {
                 disableGesture()
                 _subScrollView = subScrollView
@@ -43,7 +44,7 @@ class ZYScrollController: NSObject, UIGestureRecognizerDelegate, ZYScrollPanGest
             panGesture?.delaysTouchesBegan = true
         }
     }
-    fileprivate var isVertical: Bool = true
+    fileprivate var isVertical: Bool = false
     
     //弹性和惯性动画
     fileprivate var animator: UIDynamicAnimator?
@@ -93,19 +94,19 @@ class ZYScrollController: NSObject, UIGestureRecognizerDelegate, ZYScrollPanGest
         case .changed:
             //locationInView:获取到的是手指点击屏幕实时的坐标点；
             //translationInView：获取到的是手指移动后，在相对坐标中的偏移量
-            if isVertical {
+            if isVertical == true {
                 //往上滑为负数，往下滑为正数
                 let currentY = panGesture.translation(in: panView).y
-                if superPullDisable == true {
+                if superPullDisable {//不支持super下拉
                     self.controlScrollVerticalWithoutSuperPull(detal: currentY)
-                } else {
+                } else {//支持super下拉
                     self.controlScrollForVerticalWithSuperPull(detal: currentY)
                 }
             }
         case .cancelled:
             animator?.removeAllBehaviors()
         case .ended:
-            if isVertical {
+            if isVertical == true {
                 dynamicItem?.center = (panView?.bounds.origin)!
                 //velocity是在手势结束的时候获取的竖直方向的手势速度
                 let velocity = panGesture.velocity(in: panView)
@@ -114,18 +115,18 @@ class ZYScrollController: NSObject, UIGestureRecognizerDelegate, ZYScrollPanGest
                 // 通过尝试取2.0比较像系统的效果
                 inertialBehavior.resistance = 2.0
                 var lastCenter = CGPoint(x: 0, y: 0)
-                inertialBehavior.action = { [weak self] in
-                    if (self?.isVertical)! {
-                        let currentY = (self?.dynamicItem?.center.y)! - lastCenter.y
-                        if (self?.superPullDisable)! {
-                            self?.controlScrollVerticalWithoutSuperPull(detal: currentY)
-                            self?.normalizeOffsetWithoutSuperPull()
-                        } else {
-                            self?.controlScrollForVerticalWithSuperPull(detal: currentY)
-                            self?.normalizeOffsetWithSuperPull()
+                inertialBehavior.action = {
+                    if self.isVertical {
+                        let currentY = (self.dynamicItem?.center.y)! - lastCenter.y
+                        if self.superPullDisable {//不支持super下拉
+                            self.controlScrollVerticalWithoutSuperPull(detal: currentY)
+                            self.normalizeOffsetWithoutSuperPull()
+                        } else {//支持super下拉
+                            self.controlScrollForVerticalWithSuperPull(detal: currentY)
+                            self.normalizeOffsetWithSuperPull()
                         }
                     }
-                    lastCenter = (self?.dynamicItem?.center)!
+                    lastCenter = (self.dynamicItem?.center)!
                 }
                 animator?.addBehavior(inertialBehavior)
                 decelerationBehavior = inertialBehavior
@@ -204,7 +205,7 @@ class ZYScrollController: NSObject, UIGestureRecognizerDelegate, ZYScrollPanGest
                 }
             }
         } else {//上滑
-            if (NSInteger(self.superScrollView!.contentOffset.y)  <  NSInteger(self.superMaxScrollY)) {
+            if (self.superScrollView!.contentOffset.y  <  self.superMaxScrollY) {
                 aimOffsetY = self.superScrollView!.contentOffset.y - detal;
                 if aimOffsetY > self.superMaxScrollY {
                     aimOffsetY = self.superMaxScrollY
@@ -287,12 +288,12 @@ class ZYScrollController: NSObject, UIGestureRecognizerDelegate, ZYScrollPanGest
             // nothing, never going here
         }
         
-        let springBehavior = attachBehavior(item: dynamicItem!, anchor: target!) { [weak self] in
-            if (self?.subScrollView?.zy_isOffsetYIlleagal())! {
-                self?.subScrollView?.contentOffset = (self?.dynamicItem?.center)!
+        let springBehavior = attachBehavior(item: dynamicItem!, anchor: target!) {
+            if (self.subScrollView?.zy_isOffsetYIlleagal())! {
+                self.subScrollView?.contentOffset = (self.dynamicItem?.center)!
             } else {
-                self?.animator?.removeBehavior((self?.springBehavior)!)
-                self?.springBehavior = nil
+                self.animator?.removeBehavior((self.springBehavior)!)
+                self.springBehavior = nil
             }
         }
         

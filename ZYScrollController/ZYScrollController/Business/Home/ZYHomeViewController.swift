@@ -38,7 +38,8 @@ class ZYHomeViewController: ZYBaseViewController, UIScrollViewDelegate {
         
         scrollView.addSubview(headerView)
         headerView.snp.makeConstraints { (make) in
-            make.top.left.right.equalTo(self.view)
+            make.top.left.right.equalToSuperview()
+            make.width.equalTo(self.view)
             make.height.equalTo(headerHeight)
         }
         
@@ -47,19 +48,20 @@ class ZYHomeViewController: ZYBaseViewController, UIScrollViewDelegate {
         activityListController.didMove(toParentViewController: self)
         activityListController.view.snp.makeConstraints { (make) in
             make.top.equalTo(headerView.snp.bottom)
-            make.left.right.equalTo(self.view)
-            make.height.equalTo(UIScreen.main.bounds.height - headerHeight)
+            make.left.right.equalToSuperview()
+            make.width.equalTo(self.view)
+            make.height.equalTo(UIScreen.main.bounds.height - headerHeight + 64)
         }
         
         self.scrollController = ZYScrollController()
+        scrollController.setupTouch(self.view)
         scrollController.superScrollView = scrollView
         scrollController.subScrollView = activityListController.tableView
-        scrollController.superMaxScrollY = headerHeight
-        scrollController.superPullDisable = false
-        scrollController.setupTouch(self.view)
-        activityListController.tableView.isScrollEnabled = false
-        activityListController.tableView.panGestureRecognizer.isEnabled = false
+        scrollController.superMaxScrollY = headerHeight - 64
+        scrollController.superPullDisable = true
         activityListController.scrollDelegate = scrollController
+        activityListController.tableView.isScrollEnabled = false
+//        activityListController.tableView.panGestureRecognizer.isEnabled = false
     }
     
     lazy var scrollController: ZYScrollController = {
@@ -85,4 +87,14 @@ class ZYHomeViewController: ZYBaseViewController, UIScrollViewDelegate {
         return activityListController
     }()
 
+}
+
+extension ZYHomeViewController {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView == self.scrollView {
+            if scrollView.contentOffset.y == 0 {
+                activityListController.tableView.contentOffset = CGPoint(x: 0, y: 0)
+            }
+        }
+    }
 }
