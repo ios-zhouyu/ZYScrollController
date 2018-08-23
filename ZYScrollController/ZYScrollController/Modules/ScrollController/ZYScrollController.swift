@@ -149,6 +149,7 @@ class ZYScrollController: NSObject, UIGestureRecognizerDelegate, ZYScrollPanGest
                 self.subScrollView?.contentOffset = CGPoint(x: 0, y: aimOffsetY)
             } else {
                 if self.superScrollView!.contentOffset.y > 0 {
+                    aimOffsetY = self.superScrollView!.contentOffset.y - detal
                     if aimOffsetY < 0 {
                         aimOffsetY = 0
                     }
